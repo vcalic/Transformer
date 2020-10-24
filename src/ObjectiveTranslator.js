@@ -72,7 +72,7 @@ class ObjectiveTranslator {
     if(attributes.length == 0) { return ""; }
 
     let cocoaAttributes =  
-    `NSDictionary <NSAttributedStringKey, id> *${attributeName} = @{\n` +
+    `NSDictionary <NSAttributedString.Key, id> *${attributeName} = @{\n` +
     `   ${attributes.join(",\n   ")}\n` +
     `};\n` +
     `[attributedString addAttributes:${attributeName} range: ${range}];\n`
